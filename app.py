@@ -40,7 +40,7 @@ def init_google_sheet():
 
         return worksheet
     except Exception as e:
-        st.warning("⚠️ 구글 시트 연결에 실패했습니다. 관리자에게 문의하세요.")
+        st.warning(f"⚠️ 구글 시트 연결에 실패했습니다. 에러 원인:{e}")
         return None
 
 
@@ -141,3 +141,4 @@ else:
                 sheet.append_row([now, prompt, answer])
             except Exception as e:
                 print(f"시트 저장 에러: {e}")
+
