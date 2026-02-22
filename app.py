@@ -16,10 +16,10 @@ import pytz
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 # Streamlit 웹 페이지 설정
-st.set_page_config(page_title="성인간호학 AI 튜터", page_icon="🏥")
-st.title("🏥 성인간호학 AI 튜터")
+st.set_page_config(page_title="성인간호학 AI 튜터", page_icon="🤖")
+st.title("🤖성인간호학1 AI 튜터")
 st.markdown(
-    "강의록과 실라버스 기반으로 질문에 답변해 드립니다. 모호한 내용은 교수님께 문의하도록 안내합니다."
+    "강의록과 실라버스 기반으로 질문에 답변해 드립니다. 모호한 내용은 교수님께 문의하세요. 챗봇은 학습보조용입니다."
 )
 
 
@@ -141,4 +141,5 @@ else:
                 sheet.append_row([now, prompt, answer])
             except Exception as e:
                 print(f"시트 저장 에러: {e}")
+
 
